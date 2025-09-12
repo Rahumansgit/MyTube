@@ -40,7 +40,6 @@
 .recommended-container{
     display: flex;
     flex-direction: column;
-    gap: 15px;
     padding-bottom: 20px;
 }
 
@@ -67,7 +66,7 @@
 
 .vid-info h2{
     font-size: 13px;
-    color: #000;
+    color: var(--text-color);
     margin-bottom: 5px;
     transition: color 0.3s ease;
 }
