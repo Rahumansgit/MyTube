@@ -1,0 +1,103 @@
+.sidebar{
+    width: 15%;
+    padding: 80px 1% 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: var(--background-color);
+    overflow-y: auto;
+    z-index: 9;
+    transition: background-color 0.3s ease;
+}
+
+.shortcut-links img{
+    width: 20px;
+    margin-right: 20px;
+}
+
+.side-link{
+    display: flex;
+    align-items: center;
+    padding: 10px 7px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.side-link p{
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.shortcut-links hr{
+    border: 0;
+    height: 1px;
+    width: 90%;
+    background-color: var(--border-color);
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.subscribed-list h3{
+    font-size: 13px;
+    margin-bottom: 20px;
+    color: var(--secondary-text-color);
+    transition: color 0.3s ease;
+}
+
+.subscribed-list img{
+    width: 25px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.small-sidebar{
+    width: 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: var(--background-color);
+    overflow-y: auto;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.small-sidebar p,.small-sidebar h3{display: none;}
+
+.small-sidebar hr{width: 150%;}
+
+.side-link.active img{
+    padding-bottom: 2px;
+    border-bottom: 3px solid red;
+}
+
+.side-link:hover{
+    background-color: var(--hover-color);
+    transition: background-color 0.3s ease;
+}
+
+/* Custom scrollbar styling for sidebar */
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-color);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-hover-color);
+}
+
+/* Firefox scrollbar styling */
+.sidebar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-color) transparent;
+}

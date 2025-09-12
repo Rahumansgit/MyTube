@@ -1,0 +1,135 @@
+.Recommented{
+    flex-basis: 30%;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    padding-right: 10px;
+    position: fixed;
+    right: 0;
+    top: 65px;
+    width: 29%;
+    background-color: var(--background-color);
+    z-index: 9;
+    transition: background-color 0.3s ease;
+}
+
+/* Custom scrollbar styling */
+.Recommented::-webkit-scrollbar {
+    width: 8px;
+}
+
+.Recommented::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.Recommented::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-color);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.Recommented::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-hover-color);
+}
+
+/* Firefox scrollbar styling */
+.Recommented {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-color) transparent;
+}
+
+.recommended-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 20px;
+}
+
+.side-video-list{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+.side-video-list img{    
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.vid-info{
+    color: #555;
+    flex-basis: 50%;
+    cursor: pointer;
+}
+
+.vid-info h2{
+    font-size: 13px;
+    color: #000;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.vid-info h3{
+    font-size: 12px;
+    color: var(--secondary-text-color);
+    transition: color 0.3s ease;
+}
+
+.vid-info p{
+    font-size: 12px;
+    color: var(--secondary-text-color);
+    transition: color 0.3s ease;
+}
+
+.recommend-thumbnail {
+    position: relative;
+    flex-basis: 50%;
+}
+
+.video-duration {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.loading-indicator, .no-more-videos {
+    text-align: center;
+    padding: 20px;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.loading-spinner{
+    width: 30px;
+    height: 30px;
+    border: 3px solid #ccc;
+    border-top: 3px solid #333;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 10px;
+    transition: border-color 0.3s ease;
+}
+
+@keyframes spin{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.no-more-videos{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    color: var(--secondary-text-color);
+    font-size: 14px;
+    font-style: italic;
+    transition: color 0.3s ease;
+}

@@ -1,0 +1,47 @@
+:root {
+    /* Light theme variables */
+    --background-color: white;
+    --text-color: black;
+    --secondary-text-color: hsl(0, 0%, 35%);
+    --border-color: #ccc;
+    --hover-color: hsla(0, 0%, 50%, 0.2);
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --scrollbar-color: rgba(0, 0, 0, 0.2);
+    --scrollbar-hover-color: rgba(0, 0, 0, 0.4);
+    --skeleton-gradient: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    --accent-color: #065fd4;
+    --accent-hover-color: #1a73e8;
+    --card-background: white;
+    --search-background: hsl(0, 0%, 98%);
+}
+
+.dark-theme {
+    /* Dark theme variables */
+    --background-color: #0f0f0f;
+    --text-color: #fff;
+    --secondary-text-color: #aaa;
+    --border-color: #333;
+    --hover-color: hsla(0, 0%, 50%, 0.3);
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --scrollbar-color: rgba(255, 255, 255, 0.2);
+    --scrollbar-hover-color: rgba(255, 255, 255, 0.4);
+    --skeleton-gradient: linear-gradient(90deg, #202020 25%, #252525 50%, #202020 75%);
+    --accent-color: #3ea6ff;
+    --accent-hover-color: #65b8ff;
+    --card-background: #1f1f1f;
+    --search-background: #121212;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}

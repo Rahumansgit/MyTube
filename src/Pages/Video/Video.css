@@ -1,0 +1,35 @@
+.video-container{
+    background-color: var(--search-background);
+    padding: 20px 2% 20px 2%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    transition: background-color 0.3s ease;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+/* Adjust main content to account for fixed sidebar */
+.video-container > div:first-child {
+    flex-basis: 70%;
+    margin-right: 29%;
+}
+
+/* Custom scrollbar styling for Video page */
+.video-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.video-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.video-container::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-color);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.video-container::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-hover-color);
+}

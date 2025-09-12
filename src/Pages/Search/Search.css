@@ -1,0 +1,234 @@
+.search-page-container {
+    display: flex;
+}
+
+.search-page {
+    background-color: var(--search-background);
+    padding: 20px 2% 20px 17%;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+    overflow-y: auto;
+    height: 100vh;
+    width: 100%;
+}
+
+.large-search-page {
+    padding-left: 7%;
+}
+
+.search-header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid hsl(0, 0%, 80%);
+}
+
+.search-header h2 {
+    font-size: 24px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.search-header p {
+    color: var(--secondary-text-color);
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.search-results {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.search-result {
+    display: flex;
+    gap: 15px;
+    padding: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.2s ease;
+}
+
+.search-result:hover {
+    background-color: var(--hover-color);
+}
+
+.thumbnail {
+    flex-shrink: 0;
+    position: relative;
+}
+
+.thumbnail img {
+    width: 360px;
+    height: 202px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.video-duration {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.content h3 {
+    font-size: 18px;
+    color: var(--text-color);
+    margin-bottom: 12px;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.channel {
+    font-size: 14px;
+    color: var(--secondary-text-color);
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+.stats {
+    font-size: 13px;
+    color: var(--secondary-text-color);
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.load-more-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+    gap: 10px;
+}
+
+.loading-spinner {
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--border-color);
+    border-top: 3px solid var(--accent-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    transition: border-color 0.3s ease;
+}
+
+.load-more-results p {
+    color: var(--secondary-text-color);
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Skeleton loading styles */
+.skeleton-result {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.skeleton-thumbnail {
+    width: 360px;
+    height: 202px;
+    background: var(--skeleton-gradient);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.skeleton-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skeleton-title {
+    height: 20px;
+    background: var(--skeleton-gradient);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 4px;
+    width: 80%;
+}
+
+.skeleton-channel {
+    height: 16px;
+    background: var(--skeleton-gradient);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 4px;
+    width: 40%;
+}
+
+.skeleton-stats {
+    height: 16px;
+    background: var(--skeleton-gradient);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 4px;
+    width: 60%;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Custom scrollbar styling for Search page */
+.search-page::-webkit-scrollbar {
+    width: 8px;
+}
+
+.search-page::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.search-page::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-color);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.search-page::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-hover-color);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .search-page {
+        padding: 20px 2%;
+    }
+    
+    .thumbnail img {
+        width: 280px;
+        height: 157px;
+    }
+    
+    .content h3 {
+        font-size: 16px;
+    }
+}

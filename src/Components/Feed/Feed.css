@@ -1,0 +1,190 @@
+.feed{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(300px , 1fr));
+    margin-top: 15px;
+    grid-row-gap: 25px;
+    grid-column-gap: 14px;
+}
+
+.feed-thumbnail {
+    position: relative;
+}
+
+.video-duration {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    cursor: pointer;
+}
+
+.card h2{
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 8px 0;
+    transition: color 0.3s ease;
+}
+
+.card h3{
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--secondary-text-color);
+    margin: 6px 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.card h3:hover{
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.card p{
+    font-size: 13px;
+    color: var(--secondary-text-color);
+    transition: color 0.3s ease;
+}
+
+.card{
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.card-info{
+    padding: 0 5px 7px; 
+}
+
+.card:hover{
+    background-color: var(--card-background);
+    box-shadow: 0 0 10px var(--shadow-color);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Skeleton loading styles for Feed */
+.skeleton-card {
+    border: 0;
+    border-radius: 7px;
+    background-color: var(--card-background);
+    box-shadow: 0 0 10px var(--shadow-color);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skeleton-thumbnail {
+    width: 100%;
+    height: 140px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.skeleton-title {
+    height: 18px;
+    background: var(--skeleton-gradient);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 4px;
+    margin: 5px 0;
+    width: 90%;
+}
+
+.skeleton-channel {
+    height: 14px;
+    background: var(--skeleton-gradient);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 4px;
+    margin: 4px 0;
+    width: 60%;
+}
+
+.skeleton-stats {
+    height: 14px;
+    background: var(--skeleton-gradient);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 4px;
+    width: 50%;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Loading more styles for Feed */
+.load-more-feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+    gap: 10px;
+    grid-column: 1 / -1;
+}
+
+.load-more-feed .loading-spinner {
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--border-color);
+    border-top: 3px solid var(--accent-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    transition: border-color 0.3s ease;
+}
+
+.load-more-feed p {
+    color: var(--secondary-text-color);
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Custom scrollbar styling for Feed */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-color);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-hover-color);
+}
+
+/* Firefox scrollbar styling */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-color) transparent;
+}

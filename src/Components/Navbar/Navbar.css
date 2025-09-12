@@ -1,0 +1,118 @@
+.navbar{
+    position: sticky;
+    top: 0;
+    padding: 10px 2%;
+    background-color: var(--background-color);
+    box-shadow: 0 0 10px var(--shadow-color);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-left,
+.navbar-middle,
+.search-box,
+.navbar-right{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left .menu-icon{
+    width: 22px;
+    cursor: pointer;
+}
+
+.navbar-left .logo{
+    width: 120px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+
+.search-box{
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    padding: 8px 12px;
+    background-color: var(--card-background);
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.search-box input{
+    width: 500px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.search-box img{
+    width: 15px;
+    cursor: pointer;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-right img{
+    width: 25px;
+    margin-right: 25px;
+    cursor: pointer;
+    filter: var(--icon-filter, none);
+    transition: filter 0.3s ease;
+}
+
+.dark-theme .navbar-right img:not(.profile) {
+    filter: invert(1);
+}
+
+/* Theme toggle styles */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-switch.active {
+    background-color: var(--accent-color);
+}
+
+.toggle-circle {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.toggle-switch.active .toggle-circle {
+    transform: translateX(20px);
+}
+
+.navbar-right .profile{
+    width: 35px;
+    border-radius: 50%;
+}
