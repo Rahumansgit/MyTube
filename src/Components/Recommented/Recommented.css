@@ -132,3 +132,9 @@
     font-style: italic;
     transition: color 0.3s ease;
 }
+
+@media (max-width: 550px) {
+    .Recommented {
+        display: none;
+    }
+}

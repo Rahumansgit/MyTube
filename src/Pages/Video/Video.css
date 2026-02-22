@@ -33,3 +33,15 @@
 .video-container::-webkit-scrollbar-thumb:hover {
     background: var(--scrollbar-hover-color);
 }
+
+@media (max-width: 550px) {
+    .video-container {
+        flex-direction: column;
+        padding: 10px 5%;
+    }
+    
+    .video-container > div:first-child {
+        flex-basis: 100%;
+        margin-right: 0;
+    }
+}

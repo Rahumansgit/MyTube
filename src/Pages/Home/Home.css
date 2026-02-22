@@ -7,3 +7,84 @@
 .large-container {
     padding-left: 7%;
 }
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        padding: 20px 2% 20px 20%;
+    }
+    
+    .large-container {
+        padding-left: 8%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        padding: 20px 2% 20px 22%;
+    }
+    
+    .large-container {
+        padding-left: 9%;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        padding: 20px 2% 20px 24%;
+    }
+    
+    .large-container {
+        padding-left: 10%;
+    }
+}
+
+@media (max-width: 800px) {
+    .container {
+        padding: 20px 2% 20px 27%;
+    }
+    
+    .large-container {
+        padding-left: 11%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        padding: 20px 2% 20px 30%;
+    }
+    
+    .large-container {
+        padding-left: 12%;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 2%;
+    }
+    
+    .large-container {
+        padding: 20px 2%;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 15px 3%;
+    }
+    
+    .large-container {
+        padding: 15px 3%;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 15px 4%;
+    }
+    
+    .large-container {
+        padding: 15px 4%;
+    }
+}

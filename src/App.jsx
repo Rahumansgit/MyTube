@@ -28,7 +28,7 @@ function App() {
     <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
       <Navbar sidebar={sidebar} setSidebar={setSidebar} />
       <Routes>
-        <Route path='/' element={<Home sidebar={sidebar} catagory={catagory} setCatagory={setCatagory} />} />
+        <Route path='/' element={<Home sidebar={sidebar} setSidebar={setSidebar} catagory={catagory} setCatagory={setCatagory} />} />
         <Route path='/video/:catagoryId/:videoId' element={<Video/>} />
         <Route path='/search' element={<Search sidebar={sidebar} setSidebar={setSidebar} catagory={catagory} setCatagory={setCatagory} />} />
       </Routes>
