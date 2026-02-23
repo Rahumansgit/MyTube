@@ -1,5 +1,11 @@
 📺 MyTube — YouTube-Style Video Streaming App
 
+![GitHub repo size](https://img.shields.io/github/repo-size/Rahumansgit/MyTube)
+![GitHub stars](https://img.shields.io/github/stars/Rahumansgit/MyTube?style=social)
+![GitHub forks](https://img.shields.io/github/forks/Rahumansgit/MyTube?style=social)
+![GitHub last commit](https://img.shields.io/github/last-commit/Rahumansgit/MyTube)
+
+
 MyTube is a YouTube-inspired frontend video streaming web application built using React.js
 
 It replicates the layout and core UI structure of YouTube, including sidebar navigation, video feed, video player page, recommended section, and search functionality.
